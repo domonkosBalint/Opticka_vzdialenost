@@ -1,0 +1,10 @@
+﻿Build started 13.02.2017 14:15:19.
+     1>Project "C:\Balint\SULI\VYSKA\10.semester\Vizualne systemy\HusainDomonkos\optickaVzdialenost\optickaVzdialenost\optickaVzdialenost.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Balint\SULI\VYSKA\10.semester\Vizualne systemy\HusainDomonkos\optickaVzdialenost\Debug\optickaVzdialenost.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Balint\SULI\VYSKA\10.semester\Vizualne systemy\HusainDomonkos\opencv\build\x64\vc12\lib" opencv_world300d.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Balint\SULI\VYSKA\10.semester\Vizualne systemy\HusainDomonkos\optickaVzdialenost\Debug\optickaVzdialenost.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Balint\SULI\VYSKA\10.semester\Vizualne systemy\HusainDomonkos\optickaVzdialenost\Debug\optickaVzdialenost.lib" /MACHINE:X86 Debug\Source.obj
+     1>opencv_world300d.lib(opencv_world300d.dll) : fatal error LNK1112: module machine type 'x64' conflicts with target machine type 'X86'
+     1>Done Building Project "C:\Balint\SULI\VYSKA\10.semester\Vizualne systemy\HusainDomonkos\optickaVzdialenost\optickaVzdialenost\optickaVzdialenost.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.35

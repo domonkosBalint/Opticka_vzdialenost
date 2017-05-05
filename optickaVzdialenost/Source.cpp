@@ -41,6 +41,7 @@ int main(int argc, char** argv) {
 	int posY;
 	int iLastX = -1;
 	int iLastY = -1;
+	double pomer = 3.4;
 
 	VideoCapture cap(0); //capture the video from webcam
 
@@ -88,7 +89,7 @@ int main(int argc, char** argv) {
 	imgLines = Mat::zeros(imgTmp.size(), CV_8UC3);
 
 	vector<Vec3f> circles;
-	int radius;
+	int radius =0;
 	Point center;
 
 	while (true) {
@@ -108,9 +109,7 @@ int main(int argc, char** argv) {
 		threshold(differenceImage,thresholdImage,SENSITIVITY_VALUE,255,THRESH_BINARY);
 		*/
 		//imshow("Difference Image",differenceImage);
-		//imshow("Threshold Image", thresholdImage);
-
-
+		//imshow("Threshold Image", thresholdImage)
 
 		GaussianBlur(grayImage1, grayImage1, Size(9, 9), 2, 2);
 
@@ -124,6 +123,7 @@ int main(int argc, char** argv) {
 			center.y = cvRound(circles[i][1]);
 
 			radius = cvRound(circles[i][2]);
+
 			// circle center
 			circle(imgOriginal, center, 3, Scalar(0, 255, 0), -1, 8, 0);
 			// circle outline
@@ -161,7 +161,11 @@ int main(int argc, char** argv) {
 				line(imgLines, Point(posX, posY), Point(iLastX, iLastY), Scalar(0, 0, 255), 2);
 				//std::cout << "X: " << (int)(iLastX-posX) << "     Y: " << (int)(iLastY-posY) << endl;   //pocitam si vzdialenost
 				vzdialenost = sqrt((double)((iLastX - posX)*(iLastX - posX)) + (double)((iLastY - posY)*(iLastY - posY)));
-				cout << vzdialenost << endl;
+				system("CLS");
+				cout << "Vzdialenost-" << vzdialenost << endl;
+				printf("X os - %f ;", posX / 20.5);
+				printf("Y os - %f ;", 40.5 / posY * 100);
+				printf("Z os - %f", pomer / radius * 1000);
 				//Sleep(2000);
 			}
 
